@@ -12,14 +12,14 @@ import (
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "tardiff"
-	app.Usage = "compare tar files"
-	app.Action = tardiff
+	app.Name = "zipdiff"
+	app.Usage = "compare zip files"
+	app.Action = zipdiff
 	app.Version = "0.0.1"
 	app.Run(os.Args)
 }
 
-func tardiff(c *cli.Context) {
+func zipdiff(c *cli.Context) {
 	if c.NArg() != 2 {
 		cli.ShowAppHelp(c)
 	} else {
